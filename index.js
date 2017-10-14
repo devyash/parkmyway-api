@@ -16,14 +16,11 @@ MongoClient.connect('mongodb://dev:dev123@ds121015.mlab.com:21015/parkmyway', (e
   if (err) return console.log(err)
   db = database
 	app.use(bodyParser.urlencoded({extended: true}))
-	app.get('/', (req, res) => {
-  	res.sendFile(__dirname + '/index.html')
 
-	})
 
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
-  }); 
+  });
 
 	app.get('/park', (req, res) => {
     let response_json =[{}];
