@@ -24,7 +24,7 @@ MongoClient.connect('mongodb://dev:dev123@ds121015.mlab.com:21015/parkmyway', (e
 
 	app.get('/park', (req, res) => {
     let response_json =[{}];
-      if(typeof req.query.park_id == undefined){
+      if(req.query.park_id != null){
         //TODO: send details of the parking spot
         response_json=[{
           "park_id":"asdk13221asdas",
